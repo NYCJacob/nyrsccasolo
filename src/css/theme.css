@@ -1,0 +1,369 @@
+/*this is modification of original main class css*/
+
+/*this was needed to get empty sidebar for background images*/
+body, html, .container-fluid, .right-column, .left-column, .content, .page-content {
+    height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.left-column {
+    background: url(../images/col-1-bg.jpg) repeat-x;
+    background-attachment: fixed;
+}
+
+.right-column {
+    background:url(../images/col-2-bg.jpg) repeat-x;
+}
+
+div#navbar {
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+.carousel{
+}
+
+img{
+    padding: .08em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content{
+    /*these lines trying to prevent overflow problems*/
+    overflow-y:scroll;
+    max-height: 100vh;
+    /*                    ***************/
+    margin:0 auto;
+    position:relative;
+    /*width:960px;*/
+    /*width: 100%;*/
+    /*background-color: #ffffff;*/
+    border-radius:4px;
+    /*padding:0 0 10px 0;*/
+    padding: .8em;
+}
+
+@media all and (max-width: 750px) {
+    p {
+        font-size: 14px !important;   /*bootstrap value*/
+        font-size: 2.1vw !important;  /*dynamic sizing */
+    }
+
+    h1 {
+        font-size: 5.9vw !important; /*dynamic sizing */
+    }
+
+    h2 {
+        font-size: 4.5vw !important;  /*dynamic sizing */
+    }
+
+    h3 {
+        font-size: 3.3vw !important; /*dynamic sizing */
+    }
+
+    h4 {
+        font-size: 3vw !important; /*dynamic sizing */
+    }
+
+}
+
+#welcome-heading {
+    margin-top: 0;
+    padding-right: .1em;
+}
+
+.navbar-brand{
+    /*background: url(../images/logo.png) no-repeat 0 0;*/
+
+}
+
+
+.sponsors{
+    padding: .8em;
+}
+.img-box {
+    display: inline-block;
+    padding: 3px;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 3px;
+    margin-bottom: 12px;
+}
+
+.google-maps {
+    position: relative;
+    padding-bottom: 75%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/*quote styling modeled from css-tricks.com*/
+blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+    font-size: 1em;
+}
+blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+blockquote:after {
+    color: #ccc;
+    content: close-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+blockquote p {
+    display: inline;
+}
+
+.testimonials{
+    background: url("http://placehold.it/350x150");
+}
+/*end blockquote styles*/
+
+/*Superfish nav menu styles*/
+
+.sf-menu{
+    min-height:36px;
+    padding:0;
+    margin:0;
+}
+.sf-menu ul{
+    position:absolute;
+    top:-999em;
+    width:185px;
+    left:0;
+    display:none;
+    background:#333;
+    list-style: none;
+}
+.sf-menu > li{
+    position:relative;
+    float:left;
+    margin:0 3px;
+}
+
+.sf-menu > li > a {
+    text-decoration:none;
+    display:block;
+    font-family: 'Oswald', sans-serif;
+    font-size:18px;
+    line-height:22px;
+    text-transform:uppercase;
+    color:#333;
+    padding:7px 8px;
+}
+
+.sf-menu > li.current > a, .sf-menu > li:hover > a, .sf-menu > li.sfHover > a {
+    color:#fff;
+    text-decoration:none;
+    background:#333;
+}
+
+.sf-menu li:hover ul,.sf-menu li.sfHover ul{top:37px; left:0; z-index:999;}
+.sf-menu li:hover li ul,ul.sf-menu li.sfHover li ul{top:-999em}
+.sf-menu li.current,.sf-menu li:hover,.sf-menu li.sfHover{
+    text-decoration:none;
+}
+.sf-menu li li a{
+    display:block;
+    margin:0;
+    position:relative;
+    text-decoration:none;
+    font-size:14px;
+    line-height:18px;
+    color:#fff;
+    overflow:hidden;
+    padding:5px 5px 5px 15px;
+    text-transform:uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+.sf-menu li li > a:hover, .sf-menu li li.sfHover > a, .sf-menu li li.current > a{
+    color:#333;
+    background:#fff;
+}
+
+.sf-menu li li{
+    float:none;
+    position:relative;
+}
+
+.sf-menu li li:hover ul,ul.sf-menu li li.sfHover ul{left:186px;top:0;}
+
+#nassColpic{
+    margin-top: 20px;
+}
+
+#membershipImage{
+    margin-top: 20px;
+}
+
+
+/*accordian glyph customization */
+.panel-heading [data-toggle="collapse"]:after
+{
+    font-family: 'Glyphicons Halflings';
+    content: "\e072";
+    float: right;
+    color: #0000ff;
+    font-size: 18px;
+    line-height: 22px;
+
+    -webkit-transform: rotate(90deg);
+    -moz-transform:    rotate(90deg);
+    -ms-transform:     rotate(90deg);
+    -o-transform:      rotate(90deg);
+    transform:         rotate(90deg);
+}
+.panel-heading [data-toggle="collapse"].collapsed:after
+{
+    -webkit-transform: rotate(0deg);
+    -moz-transform:    rotate(0deg);
+    -ms-transform:     rotate(0deg);
+    -o-transform:      rotate(0deg);
+    transform:         rotate(0deg);
+}
+
+
+
+
+/*AXWARE Styles*/
+
+.axware .rowhigh {
+         background-color: #F0F0F0
+     }
+
+.axware .rowlow {
+        background-color: #FFFFFF
+    }
+
+.axware .rowhighbreak {
+        background-color: #F0F0F0;
+        page-break-before: always
+    }
+
+.axware .rowlowbreak {
+        background-color: #FFFFFF;
+        page-break-before: always
+    }
+
+    /*BODY {*/
+        /*font-family: verdana;*/
+        /*font-size: 100%*/
+    /*}*/
+
+.axware p {
+        margin-top: .6em;
+        margin-bottom: .6em
+    }
+
+.axware p.bigfix {
+        margin-top: -.4em;
+        margin-bottom: 0em;
+    }
+
+.axware p.margin {
+        margin-left: 2em;
+        margin-top: -1.75em;
+    }
+
+.axware table {
+        /*font-size: 80%;*/
+        margin-top: 1em;
+        margin-bottom: 1em
+    }
+
+.axware H1 {
+        text-align: center;
+        font-family: Arial;
+        /*font-size: 125%;*/
+        font-weight: bold;
+        color: #0000FF
+    }
+
+.axware H2 {
+        text-align: center;
+        font-family: Arial;
+        /*font-size: 120%;*/
+        font-weight: bold;
+        color: #0000FF
+    }
+
+.axware H3 {
+        text-align: center;
+        font-family: Arial;
+        /*font-size: 110%;*/
+        font-weight: bold;
+        color: #0000FF
+    }
+
+.axware th {
+        color: #FFFFFF;
+        font-family: Arial;
+        font-size: 100%;
+        font-weight: bold;
+        background-color: #000099
+    }
+
+.axware td {
+        vertical-align: top
+    }
+
+.axware .bestt {
+        font-weight: bold
+    }
+
+.axware a.nav:link {
+        color: #f0f0f0
+    }
+
+.axware a.nav:visited {
+        color: #e0e0e0
+    }
+
+.axware a.nav:hover {
+        color: #FFFFFF
+    }
+
+.axware a.nav:active {
+        color: #f0f0f0
+    }
+
+.axware @media all {
+        .page-break {
+            display: none;
+        }
+    }
+
+.axware @media print {
+        .page-break {
+            display: block;
+            page-break-before: always;
+        }
+    }
+
+.annoucement{
+    margin: 0 auto;
+}
