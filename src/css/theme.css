@@ -76,6 +76,10 @@ img{
     padding-right: .1em;
 }
 
+#welcomePara {
+    margin-right: 20%;
+}
+
 .navbar-brand{
     /*background: url(../images/logo.png) no-repeat 0 0;*/
 
@@ -220,6 +224,11 @@ blockquote p {
     margin-top: 20px;
 }
 
+.events-list {
+    font-size: 3vh;
+    line-height: 2.0;
+    list-style-type: disc;
+}
 
 /*accordian glyph customization */
 .panel-heading [data-toggle="collapse"]:after

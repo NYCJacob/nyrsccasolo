@@ -9,13 +9,11 @@
     <link rel="icon" type="image/png" href="coneIcon.png">
 
     <!--Bootstrap core css-->
-    <link href="scripts/vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="scripts/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <!--Bootstrap theme-->
-    <link href="scripts/vendor/bootstrap/dist/css/bootstrap-theme.css"/>
+    <link href="scripts/vendor/bootstrap/dist/css/bootstrap-theme.min.css"/>
     <!--Custom css styles-->
     <link rel="stylesheet" href="css/theme.css">
-    <!--Original Custom css styles-->
-    <!--<link rel="stylesheet" href="css/style.css">-->
 
     <!--[if lt IE 8]>
     <div style=' clear: both; text-align:center; position: relative;'>
@@ -123,9 +121,13 @@
                 </div>
             </div>
 
+            <div class="row clearfix">
+                <h3 class="bg-danger text-center"><a href="#2017-events">2017 Events Announced</a></h3>
+            </div>
+
             <!-- Slider -->
             <div id="carousel-example-generic" data-ride="carousel" class="carousel slide"
-                 style="max-width: 940px; margin: 0 auto">
+                 style="max-width: 900px; margin: 0 auto">
                 <ol class="carousel-indicators">
                     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
@@ -172,29 +174,33 @@
                                 <img src="images/page1-img1.png" alt="" class="img-responsive">
                             </div>
                             <div class="col-xs-9">
-                                    <h2 id="welcome-heading">Welcome to the NY Region SCCA Solo Club</h2>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h2 id="welcome-heading">Welcome to the NY Region SCCA Solo Club</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h4 id="welcomePara">If you've every wanted to drive your car in a high performance setting and
+                                            learn to be a better driver, you've come to the right place. Autocross has been
+                                            around for decades but there are so few places left to participate in Long Island.
+                                            We invite you to try your hand at one of the best possible times behind the wheel. </h4>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <h4 id="welcomePara">If you've every wanted to drive your car in a high performance setting and
-                                    learn to be a better driver, you've come to the right place. Autocross has been
-                                    around for decades but there are so few places left to participate in Long Island.
-                                    We invite you to try your hand at one of the best possible times behind the wheel. </h4>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
 
                 <div class="row center-block">
-                    <div class="col-xs-12">
+                    <div class="col-xs-12" id="2017-events">
                         <h1 class="text-success text-center text-capitalize"><strong>Latest News</strong></h1>
-                        <ul class="list-unstyled">
-                            <li>
-                                <h2 CLASS="text-danger"><strong>2017 Schedule</strong></h2>
-                                <p>Please read the <a href="calendar.html">calender</a> carefully and check Facebook Long Island Autocross page for last minute updates.</p>
-                            </li>
-                            <li>April 4, 2017 @ AWARD DINNER</li>
+                        <h2 CLASS="text-danger"><strong>2017 Schedule</strong></h2>
+                        <p>Please read the <a href="calendar.html">calender</a> carefully and check Facebook Long Island Autocross page for last minute updates.</p>
+                        <ul class="events-list">
+                            <li>April 4, 2017 AWARDS DINNER @ Berticci's in Melville</li>
                             <li>April 23, 2017 @ Splish Splash</li>
                             <li>April 30, 2017 @ Splish Splash</li>
                             <li>May 7, 2017 @ Splish Splash</li>
@@ -207,14 +213,6 @@
                     </div>
                 </div>
 
-                <!--  row-->
-                <div class="row center-block">
-                    <article class="col-xs-12">
-                        <h1 class="hp-1">Upcoming Events:</h1>
-                        <p>Season is over????  stay tuned.....</p>
-                    </article>
-                </div>
-
             <!-- Footer -->
             <footer class="text-center">
                 <p>You can also find us elsewhere around the web: </p>
@@ -222,12 +220,11 @@
                     <li><a href="http://http://www.sccaforums.com/forums/aff/113">SCCA Forums</a></li>
                     <li> <a href="http://www.facebook.com/groups/187806071327935">Facebook @ Autocross Long Island</a></li>
                 </ul>
-                <p>©2013 - 2015 New York Region Sports Car Club of America</p>
+                <p>©2013 - 2017 New York Region Sports Car Club of America</p>
             </footer>
         </div>
 
         <div class="col-xs-1 pull-right right-column"></div>
-
 
     </div>
 
@@ -237,12 +234,5 @@
 <script src="scripts/vendor/jquery/dist/jquery.min.js"></script>
 <script src="scripts/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 
-<!--<script src="js/superfish.js"></script>-->
-<script src="scripts/vendor/superfish/dist/js/superfish.min.js"></script>
-<!--this controls animation in out speed-->
-<script src="scripts/jquery.easing.1.3.js"></script>
-
-<script src="scripts/tms-0.4.1.js"></script>
-<script src="scripts/slider.js"></script>
 </body>
 </html>
