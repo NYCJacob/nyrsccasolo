@@ -32,17 +32,11 @@ gulp.task('min-css', function() {
         .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('min-superfish', function () {
-    return gulp.src('src/scripts/vendor/superfish/dist/css/*.css', {base: 'src'})
-        .pipe(cleanCSS({compatibility: 'ie8'}))
-        .pipe(concatCss("superfish.min.css"))
-        .pipe(gulp.dest('./src/css'));
-});
-
 //  concat the minified (CAUTION: superfish is from bower
 // but does not come with .min see min-superfish)
 gulp.task('concatCss', function () {
-    return gulp.src('src/scripts/vendor/**/*.min.css')
+    return gulp.src(['src/scripts/vendor/bootstrap/dist/css/*.min.css',
+                    '!src/scripts/vendor/bootstrap/dist/css/*map' ])
         .pipe(concatCss("vendor.min.css"))
         .pipe(gulp.dest('dist/css'));
 });
@@ -50,10 +44,11 @@ gulp.task('concatCss', function () {
 // html tasks
 gulp.task('replace-min:html', function () {
     return gulp.src('src/*.html')
+        .pipe(customPlumber('Error Running	replace-min:html'))
         .pipe(htmlreplace({
             'css' : ['<link rel="stylesheet" href="css/theme.css">',
                     '<link rel="stylesheet" href="css/vendor.min.css">'],
-            'js' : '<script src="scripts/vendor.min.js"></script>'
+            'js-vendor' : '<script src="scripts/vendor.min.js"></script>'
         }))
         .pipe(plugins.htmlmin({
             collapseWhitespace: true,
@@ -63,22 +58,12 @@ gulp.task('replace-min:html', function () {
         .pipe(gulp.dest('dist'))
 });
 
-gulp.task('minHTML', function() {
-    return gulp.src('src/*.html')
-        .pipe(plugins.htmlmin({
-            collapseWhitespace: true,
-            removeComments: true,
-            removeEmptyAttributes: true
-        }))
-        .pipe(gulp.dest('dist'));
-});
-
 
 // js tasks  ***********************************//
 
-gulp.task('concat-min:vendor', function() {
-    return gulp.src(['./src/scripts/vendor/bootstrap/dist/js/bootstrap.min.js',
-                    './src/scripts/vendor/jquery/dist/jquery.min.js',
+gulp.task('concat-js:vendor', function() {
+    return gulp.src(['./src/scripts/vendor/jquery/dist/jquery.min.js',
+                    './src/scripts/vendor/bootstrap/dist/js/bootstrap.min.js',
                     './src/scripts/vendor/jquery/external/sizzle/dist/sizzle.min.js'])
         .pipe(plugins.concat('vendor.min.js'))
         .pipe(gulp.dest('./dist/scripts'));
@@ -143,18 +128,11 @@ gulp.task('browserSync', function()	{
     })
 });
 
-// copy bootstrap fonts folder
-gulp.task('copy-fonts', function () {
-    return gulp.src('src/scripts/vendor/bootstrap/dist/fonts/*')
-        .pipe(gulp.dest('dist/fonts'));
-});
-
-
 gulp.task('serve:dist', serve('dist'));
 gulp.task('serve:src', serve('src'));
-
-gulp.task('build', function (done) {
-    runSequence(
-        'clean', 'min-css', 'concat-min:js', 'replace-min:html', 'copy',
-        done);
-});
+//
+// gulp.task('build', function (done) {
+//     runSequence(
+//         'clean', 'min-css', 'concat-min:js', 'replace-min:html', 'copy',
+//         done);
+// });
