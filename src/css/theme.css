@@ -100,7 +100,7 @@ img{
 
 .google-maps {
     position: relative;
-    padding-bottom: 75%; // This is the aspect ratio
+    padding-bottom: 75%; /* This is the aspect ratio */
     height: 0;
     overflow: hidden;
 }
@@ -360,18 +360,7 @@ blockquote p {
         color: #f0f0f0
     }
 
-.axware @media all {
-        .page-break {
-            display: none;
-        }
-    }
 
-.axware @media print {
-        .page-break {
-            display: block;
-            page-break-before: always;
-        }
-    }
 
 .annoucement{
     margin: 0 auto;

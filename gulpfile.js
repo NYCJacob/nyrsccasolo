@@ -20,56 +20,39 @@ var	nunjucksRender = require('gulp-nunjucks-render');
 var runSequence = require('run-sequence');
 
 var pkg = require('./package.json');
+var dirs = pkg['gulp-configs'].directories;
+
 
 // css tasks  ******************************************
-gulp.task('lint:sass',	function()	{
-    return	gulp.src('src/sass/*.scss')
-        .pipe(plugins.sassLint({
-            //	Pointing	to	config	file '.scss-lint.yml'
-            configFile: '.sassLint.yml'
-        }));
-});
-
-
-gulp.task('sass',	function()	{
-    return	gulp.src('src/sass/*.scss')
-    // pass custom title to gulp-plumber error handler function
-        .pipe(customPlumber('Error Running	Sass'))
-        //	Initialize	sourcemap
-        .pipe(plugins.sourcemaps.init())
-        .pipe(plugins.sass())
-        //	Runs	produced	CSS	through	autoprefixer
-        .pipe(plugins.autoprefixer())
-        //	Writing	sourcemaps
-        .pipe(plugins.sourcemaps.write())
-        .pipe(gulp.dest('src/css'))
-        //	Tells	Browser	Sync	to	reload	files	task	is	done
-        // browserSync not loaded by load-plugins
-        .pipe(browserSync.reload({
-            stream:	true
-        }))
-});
-
-gulp.task('concatCss', function () {
-    return gulp.src('src/css/*.css')
-        .pipe(concatCss("css/styles.css"))
-        .pipe(gulp.dest('dist'));
-});
 
 gulp.task('min-css', function() {
-    return gulp.src('src/css/*.css', {base: 'src'})
-        .pipe(concatCss("css/styles.min.css"))
+    return gulp.src(['src/css/*.css', '!src/css/*.min.css'], {base: 'src'})
+        .pipe(customPlumber('Error Running	min-css'))
+        .pipe(concatCss("styles.min.css"))
         .pipe(cleanCSS({compatibility: 'ie8'}))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('./src/css'));
 });
 
+gulp.task('min-superfish', function () {
+    return gulp.src('src/scripts/vendor/superfish/dist/css/*.css', {base: 'src'})
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(concatCss("superfish.min.css"))
+        .pipe(gulp.dest('./src/css'));
+});
+
+//  concat the minified (CAUTION: superfish is from bower
+// but does not come with .min see min-superfish)
+gulp.task('concatCss', function () {
+    return gulp.src(['src/css/*.min.css', 'src/scripts/vendor/**/*.min.css'])
+        .pipe(concatCss("css/styles.min.css"))
+        .pipe(gulp.dest('dist'));
+});
 
 // html tasks
 gulp.task('replace-min:html', function () {
     return gulp.src('src/*.html')
         .pipe(htmlreplace({
-            'css' : 'css/styles.min.css',
-            'js': 'scripts/app.min.js'
+            'css' : '<link rel="stylesheet" href="css/styles.min.css">'
         }))
         .pipe(plugins.htmlmin({
             collapseWhitespace: true,

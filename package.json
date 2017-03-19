@@ -39,6 +39,14 @@
   "engines": {
     "node": ">=0.10.0"
   },
+  "gulp-configs": {
+    "directories": {
+      "archive": "archive",
+      "dist": "dist",
+      "src": "src",
+      "test": "test"
+    }
+  },
   "name": "NYR-Solo-Website",
   "version": "1.0.0",
   "private": true
