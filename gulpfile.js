@@ -26,11 +26,10 @@ var dirs = pkg['gulp-configs'].directories;
 // css tasks  ******************************************
 
 gulp.task('min-css', function() {
-    return gulp.src(['src/css/*.css', '!src/css/*.min.css'], {base: 'src'})
+    return gulp.src('src/css/theme.css', {base: 'src'})
         .pipe(customPlumber('Error Running	min-css'))
-        .pipe(concatCss("styles.min.css"))
         .pipe(cleanCSS({compatibility: 'ie8'}))
-        .pipe(gulp.dest('./src/css'));
+        .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('min-superfish', function () {
@@ -43,16 +42,18 @@ gulp.task('min-superfish', function () {
 //  concat the minified (CAUTION: superfish is from bower
 // but does not come with .min see min-superfish)
 gulp.task('concatCss', function () {
-    return gulp.src(['src/css/*.min.css', 'src/scripts/vendor/**/*.min.css'])
-        .pipe(concatCss("css/styles.min.css"))
-        .pipe(gulp.dest('dist'));
+    return gulp.src('src/scripts/vendor/**/*.min.css')
+        .pipe(concatCss("vendor.min.css"))
+        .pipe(gulp.dest('dist/css'));
 });
 
 // html tasks
 gulp.task('replace-min:html', function () {
     return gulp.src('src/*.html')
         .pipe(htmlreplace({
-            'css' : '<link rel="stylesheet" href="css/styles.min.css">'
+            'css' : ['<link rel="stylesheet" href="css/theme.css">',
+                    '<link rel="stylesheet" href="css/vendor.min.css">'],
+            'js' : '<script src="scripts/vendor.min.js"></script>'
         }))
         .pipe(plugins.htmlmin({
             collapseWhitespace: true,
@@ -74,25 +75,15 @@ gulp.task('minHTML', function() {
 
 
 // js tasks  ***********************************//
-gulp.task('jslint', function () {
-    return gulp.src('src/scripts/*.js')
-        .pipe(plugins.jshint())
-        .pipe(plugins.jshint.reporter('jshint-stylish'))
-});
 
-gulp.task('concat-min:js', function() {
-    return gulp.src('./src/scripts/*.js')
-        .pipe(plugins.concat('app.min.js'))
-        .pipe(plugins.uglify())
+gulp.task('concat-min:vendor', function() {
+    return gulp.src(['./src/scripts/vendor/bootstrap/dist/js/bootstrap.min.js',
+                    './src/scripts/vendor/jquery/dist/jquery.min.js',
+                    './src/scripts/vendor/jquery/external/sizzle/dist/sizzle.min.js'])
+        .pipe(plugins.concat('vendor.min.js'))
         .pipe(gulp.dest('./dist/scripts'));
 });
 
-gulp.task('concat-min:vendor', function() {  // need to exclude knockout because undefined error when concat ko inot vendor
-    return gulp.src(['./src/scripts/vendor/**/*.js', '!./src/scripts/vendor/knockout/**/*.js'])
-        .pipe(plugins.concat('vendor.min.js'))
-        .pipe(plugins.uglify())
-        .pipe(gulp.dest('./dist/scripts/vendor'));
-});
 
 gulp.task('min:JS', function () {
     // returns a Node.js stream, but no handling of error messages
@@ -104,10 +95,10 @@ gulp.task('min:JS', function () {
 
 // utility tasks   *******************************************
 gulp.task('images',	function()	{
-    return	gulp.src('src/img/**/*.+(png|jpg|jpeg|gif|svg)')
+    return	gulp.src('src/images/*.+(png|jpg|jpeg|gif|svg)')
         .pipe(plugins.newer('dist/images'))
         .pipe(plugins.imagemin())
-        .pipe(gulp.dest('dist/img'))
+        .pipe(gulp.dest('dist/images'))
 });
 
 gulp.task('clean', function (done) {
@@ -152,13 +143,12 @@ gulp.task('browserSync', function()	{
     })
 });
 
-// todo: resolve this minified issue
-// vendor js files copied instead of minified because of undefined errors on module.exports when minified
-gulp.task('copy', function () {
-    return gulp.src(['src/font-awesome-4.7.0/**/*', 'src/img/**/*', 'src/scripts/vendor/**/*.js'], {
-        base: 'src'
-    }).pipe(gulp.dest('dist'));
+// copy bootstrap fonts folder
+gulp.task('copy-fonts', function () {
+    return gulp.src('src/scripts/vendor/bootstrap/dist/fonts/*')
+        .pipe(gulp.dest('dist/fonts'));
 });
+
 
 gulp.task('serve:dist', serve('dist'));
 gulp.task('serve:src', serve('src'));
