@@ -32,30 +32,17 @@ gulp.task('min-css', function() {
         .pipe(gulp.dest('./dist'));
 });
 
-//  concat the minified (CAUTION: superfish is from bower
-// but does not come with .min see min-superfish)
-gulp.task('concatCss', function () {
-    return gulp.src(['src/scripts/vendor/bootstrap/dist/css/*.min.css',
-                    '!src/scripts/vendor/bootstrap/dist/css/*map' ])
-        .pipe(concatCss("vendor.min.css"))
-        .pipe(gulp.dest('dist/css'));
-});
 
 // html tasks
-gulp.task('replace-min:html', function () {
-    return gulp.src('src/*.html')
-        .pipe(customPlumber('Error Running	replace-min:html'))
-        .pipe(htmlreplace({
-            'css' : ['<link rel="stylesheet" href="css/theme.css">',
-                    '<link rel="stylesheet" href="css/vendor.min.css">'],
-            'js-vendor' : '<script src="scripts/vendor.min.js"></script>'
-        }))
+gulp.task('min-html', function () {
+    return gulp.src('src/results2016.html')
+        .pipe(customPlumber('Error Running min-html'))
         .pipe(plugins.htmlmin({
             collapseWhitespace: true,
             removeComments: true,
             removeEmptyAttributes: true
         }))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('dist/'))
 });
 
 
@@ -84,6 +71,11 @@ gulp.task('images',	function()	{
         .pipe(plugins.newer('dist/images'))
         .pipe(plugins.imagemin())
         .pipe(gulp.dest('dist/images'))
+});
+
+gulp.task('vendor',	function()	{
+    return	gulp.src('src/vendor/**/*')
+        .pipe(gulp.dest('dist/vendor'))
 });
 
 gulp.task('clean', function (done) {
