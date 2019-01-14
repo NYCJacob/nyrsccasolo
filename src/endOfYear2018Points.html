@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<!--suppress HtmlUnknownAttribute -->
+<html lang="en">
+<head  profile="http://www.w3.org/2005/10/profile">
+    
+    <TITLE>Year End Championship Points</TITLE>
+    <meta name="description" content="AXWare Systems (AXWARE_TS) - Autocrossing and Time-trial Solutions. Licensed to:New York Region SCCA">
+    <meta name="keywords" content="autocross, autocrossing, time-trial, timing, AXWare, AXWare Systems, events, event management, competition">
+
+    <meta charset="utf-8">
+    
+    <meta name="keywords" content="autocross new york">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="coneIcon.png">
+
+    <!-- build:css -->
+    <!--Bootstrap core css-->
+    <link href="scripts/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <!--Bootstrap theme-->
+    <link href="scripts/vendor/bootstrap/dist/css/bootstrap-theme.min.css"/>
+    <!--Custom css styles-->
+    <link rel="stylesheet" href="css/theme.css">
+    <!-- endbuild -->
+
+    <!--[if lt IE 8]>
+    <div style=' clear: both; text-align:center; position: relative;'>
+        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+            <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0"
+                 height="42" width="820"
+                 alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/>
+        </a>
+    </div>
+    <![endif]-->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <!--<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>-->
+    <script src="bower_components/html5shiv/dist/html5shiv.min.js"> </script>
+    <!--<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
+    <script src="bower_components/respond/src/respond.min.js"></script>
+    <![endif]-->
+</head>
+    <BODY>
+<style > html, body {
+   margin: 0px;
+   padding: 0px;
+   width: 98vw;
+   max-width: 100%;
+   font-family: Verdena;
+}
+
+.rowhigh {
+   background-color: #F0F0F0;
+}
+
+.rowlow {
+   background-color: #FFFFFF;
+}
+
+.rowhighbreak {
+   background-color: #F0F0F0;
+   page-break-before: always;
+}
+
+.rowlowbreak {
+   background-color: #FFFFFF;
+   page-break-before: always;
+}
+
+p {
+   margin-top: .6em;
+   margin-bottom: .6em;
+}
+
+   p.bigfix {
+      margin-top: -.4em;
+      margin-bottom: 0em;
+   }
+
+   p.margin {
+      margin-left: 2em;
+      margin-top: -1.75em;
+   }
+
+table {
+   margin-top: 1em;
+   margin-bottom: 1em;
+}
+
+   table.live {
+      font-size: 2vw;
+   }
+
+   table.wdivs tbody tr:nth-child(2n) {
+      border-bottom: 1px solid grey;
+   }
+
+   table.wdvcls tr {
+      border-bottom: 1px solid grey;
+   }
+
+H1 {
+   text-align: center;
+   font-family: Arial;
+   font-size: 125%;
+   font-weight: bold;
+   color: #0000FF;
+}
+
+H2 {
+   text-align: center;
+   font-family: Arial;
+   font-size: 120%;
+   font-weight: bold;
+   color: #0000FF;
+}
+
+H3 {
+   text-align: center;
+   font-family: Arial;
+   font-size: 110%;
+   font-weight: bold;
+   color: #0000FF;
+}
+
+th {
+   color: #FFFFFF;
+   font-family: Arial;
+   font-size: 100%;
+   font-weight: bold;
+   background-color: #000099;
+}
+
+td {
+   vertical-align: top;
+}
+
+.bestt {
+   font-weight: bold;
+}
+
+a:link {
+   color: blue;
+}
+
+a:visited {
+   color: black;
+}
+
+a:hover {
+   color: white;
+   background-color: navy;
+}
+
+a:active {
+   color: navy;
+}
+
+table.bkmark {
+   color: navy;
+}
+
+.bkmark a:link {
+   color: navy;
+   font-weight: bold;
+}
+
+.bkmark a:visited {
+   color: black;
+   font-weight: bold;
+}
+
+.bkmark a:hover {
+   color: white;
+   background-color: navy;
+   font-weight: bold;
+}
+
+.bkmark a:active {
+   color: black;
+   font-weight: bold;
+}
+
+.title a:link {
+   color: white;
+   font-weight: bold;
+}
+
+.title a:visited {
+   color: lightblue;
+   font-weight: bold;
+}
+
+.title a:hover {
+   color: white;
+   background-color: navy;
+   font-weight: bold;
+}
+
+.title a:active {
+   color: white;
+   font-weight: bold;
+}
+
+.style0 {
+   text-align: center;
+   vertical-align: bottom;
+   color: red;
+   font-size: 9.0pt;
+   font-weight: 500;
+   font-style: normal;
+   font-family: Arial;
+   border: none;
+   style-id: 0;
+}
+
+.tside {
+   style-parent: style0;
+   color: red;
+   font-size: 14.0pt;
+   font-weight: 700;
+   text-align: left;
+}
+
+.noside {
+   style-parent: style0;
+}
+
+.bside {
+   style-parent: style0;
+   border-top: none;
+   border-right: none;
+   border-bottom: 1.5pt solid blue;
+   border-left: none;
+}
+
+.rside {
+   style-parent: style0;
+   border-top: none;
+   border-right: 1.5pt solid blue;
+   border-bottom: none;
+   border-left: none;
+}
+
+.rbside {
+   style-parent: style0;
+   border-top: none;
+   border-right: 1.5pt solid blue;
+   border-bottom: 1.5pt solid blue;
+   border-left: none;
+}
+
+a.ttlright {
+   font-weight: bold;
+   color: white;
+   float: right;
+}
+
+a.ttlleft {
+   font-weight: bold;
+   color: white;
+   float: left;
+}
+
+a.ttl {
+   color: white;
+}
+
+a.ttl:visited {
+   font-weight: bold;
+   color: white;
+}
+
+span.ttlright {
+   font-size: 105%;
+   font-weight: bold;
+   color: silver;
+   float: right;
+   font-style:italic;
+}
+
+span.ttlleft {
+   font-size: 105%;
+   font-weight: bold;
+   color: silver;
+   float: left;
+   font-style:italic;
+}
+
+a.Button {
+   -webkit-appearance: none;
+   -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+   border-radius: 3px;
+   display: inline-block;
+   text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+   font-weight: bold;
+   background-color: #6495ed;
+   background-image: -webkit-gradient(linear, left top, left bottom, from(#6495ed), to(#1c5a85));
+   background-image: -webkit-linear-gradient(top, #6495ed, #1c5a85);
+   background-image: -moz-linear-gradient(top, #6495ed, #1c5a85);
+   background-image: -ms-linear-gradient(top, #6495ed, #1c5a85);
+   background-image: -o-linear-gradient(top, #6495ed, #1c5a85);
+   background-image: linear-gradient(to bottom, #6495ed, #1c5a85);
+   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#6495ed, endColorstr=#1c5a85);
+   color: white;
+   border-style: solid;
+   border-width: 1px 1px 1px 1px;
+   border-radius: 3px 3px 3px 3px;
+   text-decoration: none;
+   padding: 3px 5px 3px 5px;
+   border-color: navy;
+   font-size: 105%;
+}
+
+   a.Button:hover {
+      color: yellow;
+      border-style: solid;
+      border-width: 1px 1px 1px 1px;
+      border-radius: 3px 3px 3px 3px;
+      text-decoration: none;
+      padding: 3px 5px 3px 5px;
+      border-color: black;
+      font-size: 105%;
+   }
+
+</style>
+<!-- Date Created: Mon Jan 14 10:21:56 2019 -->
+<!-- From File: scca_memberships-->
+<table width='100%' cellpadding="3" style="border-collapse: collapse" border="0" align="center"><tbody>
+<tr class=rowlow>
+<th nowrap align=center>New York Region </th>
+</tr>
+<tr class=rowlow>
+<th nowrap align=center>Year End Championship Points - Mon Jan 14 10:21:56 2019</th>
+</tr>
+<tr class=rowlow>
+<th nowrap align=center></th>
+</tr>
+<tr class=rowlow>
+<th nowrap align=center>(Qualifying Events: 5, dropped events: 1)</th>
+</tr>
+</tbody></table>
+
+
+<table  cellpadding="3" style="border-collapse: collapse" border="1" align="center"><tbody>
+<tr class=rowlow>
+<th nowrap nowrap align="center" colspan="1" rowspan="1">Event #</th>
+<th nowrap nowrap align="center" colspan="1" rowspan="1">Event Name</th>
+</tr>
+<tr class=rowlow>
+<td align="center">1</td>
+<td nowrap>NYRSCCASolopoints#1</td>
+</tr>
+<tr class=rowlow>
+<td align="center">2</td>
+<td nowrap>NYR SCCA Solo points #2</td>
+</tr>
+<tr class=rowlow>
+<td align="center">3</td>
+<td nowrap>NYR SCCA Solo points #3</td>
+</tr>
+<tr class=rowlow>
+<td align="center">4</td>
+<td nowrap>NYR SCCA Solo points #4</td>
+</tr>
+<tr class=rowlow>
+<td align="center">5</td>
+<td nowrap>NYR SCCA Solo points #5</td>
+</tr>
+<tr class=rowlow>
+<td align="center">6</td>
+<td nowrap>NYR SCCA Solo points #6</td>
+</tr>
+<tr class=rowlow>
+<td align="center">7</td>
+<td nowrap>NYR SCCA Solo points #7</td>
+</tr>
+<tr class=rowlow>
+<td align="center">8</td>
+<td nowrap>NYR SCCA Solo points #8</td>
+</tr>
+<tr class=rowlow>
+<td align="center">9</td>
+<td nowrap>NYR SCCA Solo points #9</td>
+</tr>
+<tr class=rowlow>
+<td align="center">10</td>
+<td nowrap>Jones Beach Lot #3 - Solo #11</td>
+</tr>
+</tbody></table>
+<HR>
+<table border=0 cellpadding="3" style="border-collapse: collapse" border="1" align="center"><tbody>
+<tr class=rowlow>
+<td ><a href="#s">s</a> </td>
+<td ><a href="#t">t</a> </td>
+<td ><a href="#p">p</a> </td>
+<td ><a href="#b">b</a> </td>
+<td ><a href="#c">c</a> </td>
+<td ><a href="#h">h</a> </td>
+<td ><a href="#n">n</a> </td>
+</tr>
+<tr class=rowlow>
+</tr>
+<table  cellpadding="3" style="border-collapse: collapse" border="1" align="center"><tbody>
+<div align=center>
+
+<BR>
+</div>
+<table  cellpadding="3" style="border-collapse: collapse" border="1" align="center"><tbody>
+<tr class=rowlow>
+<th nowrap align="right">Pos.</th>
+<th nowrap align="left">Driver</th>
+<th nowrap align="center">Total Points</th>
+<th nowrap align="center">Points W/Drops</th>
+<th nowrap align="center">E-1</th>
+<th nowrap align="center">E-2</th>
+<th nowrap align="center">E-3</th>
+<th nowrap align="center">E-4</th>
+<th nowrap align="center">E-5</th>
+<th nowrap align="center">E-6</th>
+<th nowrap align="center">E-7</th>
+<th nowrap align="center">E-8</th>
+<th nowrap align="center">E-9</th>
+<th nowrap align="center">E-10</th>
+</tr>
+<tr class=rowlow>
+<th nowrap rowspan="1" colspan="2" align="left"><a name="s"></a>s - 'Street'</th>
+<th nowrap ></th>
+<th nowrap ></th>
+<th nowrap ></th>
+<th nowrap ></th>
+<th nowrap ></th>
+<th nowrap ></th>
+<th nowrap ></th>
+<th nowrap ></th>
+<th nowrap ></th>
+<th nowrap ></th>
+<th nowrap ></th>
+<th nowrap ></th>
+</tr>
+<tr class=rowhigh>
+<td  align="right">1T</td>
+<td nowrap align="left">Elliot Weiss</td>
+<td  align="center">39</td>
+<td  align="center">39</td>
+<td  align="center">4</td>
+<td  align="center">9</td>
+<td  align="center">9</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">4</td>
+<td  align="center">6</td>
+<td  align="center">3</td>
+<td  align="center">2</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowlow>
+<td  align="right">2T</td>
+<td nowrap align="left">Samad Jawed</td>
+<td  align="center">20</td>
+<td  align="center">20</td>
+<td  align="center">6</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">3</td>
+<td  align="center">1</td>
+<td  align="center">3</td>
+<td  align="center">3</td>
+<td  align="center">1</td>
+<td  align="center">3</td>
+<td  align="center"></td>
+</tr>
+<tr class=rowhigh>
+<td  align="right">3T</td>
+<td nowrap align="left">Ryan Michael</td>
+<td  align="center">19</td>
+<td  align="center">19</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">4</td>
+<td  align="center">4</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">6</td>
+<td  align="center">4</td>
+<td  align="center"></td>
+</tr>
+<tr class=rowlow>
+<td  align="right">4T</td>
+<td nowrap align="left">Eric Canals</td>
+<td  align="center">10</td>
+<td  align="center">10</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">6</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowhigh>
+<td  align="right">5 </td>
+<td nowrap align="left">Peter Renick</td>
+<td  align="center">9</td>
+<td  align="center">9</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowlow>
+<td  align="right">6 </td>
+<td nowrap align="left">Semih Kuruc</td>
+<td  align="center">6</td>
+<td  align="center">6</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">2</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowhigh>
+<td  align="right">6 </td>
+<td nowrap align="left">James MacDougall</td>
+<td  align="center">6</td>
+<td  align="center">6</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">2</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+</tr>
+<tr class=rowlow>
+<td  align="right">6 </td>
+<td nowrap align="left">Evan Thurneau</td>
+<td  align="center">6</td>
+<td  align="center">6</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowhigh>
+<td  align="right">9 </td>
+<td nowrap align="left">Anthony Grilli</td>
+<td  align="center">5</td>
+<td  align="center">5</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+</tr>
+<tr class=rowlow>
+<td  align="right">9 </td>
+<td nowrap align="left">Suzanne Hill</td>
+<td  align="center">5</td>
+<td  align="center">5</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowlow>
+<th nowrap rowspan="1" colspan="2" align="left"><a name="t"></a>t - 'Street Touring'</th>
+<th nowrap >Total Points</th>
+<th nowrap >Points W/Drops</th>
+<th nowrap >E-1</th>
+<th nowrap >E-2</th>
+<th nowrap >E-3</th>
+<th nowrap >E-4</th>
+<th nowrap >E-5</th>
+<th nowrap >E-6</th>
+<th nowrap >E-7</th>
+<th nowrap >E-8</th>
+<th nowrap >E-9</th>
+<th nowrap >E-10</th>
+</tr>
+<tr class=rowhigh>
+<td  align="right">1T</td>
+<td nowrap align="left">Bryan Walsh</td>
+<td  align="center">43</td>
+<td  align="center">43</td>
+<td  align="center">9</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">4</td>
+<td  align="center">1</td>
+<td  align="center">6</td>
+<td  align="center">9</td>
+<td  align="center">9</td>
+<td  align="center">4</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowlow>
+<td  align="right">2T</td>
+<td nowrap align="left">Jose Arroyo</td>
+<td  align="center">29</td>
+<td  align="center">29</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">6</td>
+<td  align="center">3</td>
+<td  align="center">1</td>
+<td  align="center">9</td>
+<td  align="center">4</td>
+<td  align="center"></td>
+<td  align="center">6</td>
+<td  align="center"></td>
+</tr>
+<tr class=rowhigh>
+<td  align="right">3 </td>
+<td nowrap align="left">Marc Rudon</td>
+<td  align="center">20</td>
+<td  align="center">19</td>
+<td  align="center">1</td>
+<td  align="center">4</td>
+<td  align="center">2</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">3</td>
+<td  align="center">3</td>
+<td  align="center">3</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowlow>
+<td  align="right">4 </td>
+<td nowrap align="left">Kemal Denk</td>
+<td  align="center">11</td>
+<td  align="center">11</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">2</td>
+<td  align="center"></td>
+<td  align="center">4</td>
+<td  align="center">3</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowhigh>
+<td  align="right">5 </td>
+<td nowrap align="left">myles stankiewicz</td>
+<td  align="center">5</td>
+<td  align="center">5</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+</tr>
+<tr class=rowlow>
+<td  align="right">5 </td>
+<td nowrap align="left">Amy Wunsch</td>
+<td  align="center">5</td>
+<td  align="center">5</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowlow>
+<th nowrap rowspan="1" colspan="2" align="left"><a name="p"></a>p - 'Street Prepared'</th>
+<th nowrap >Total Points</th>
+<th nowrap >Points W/Drops</th>
+<th nowrap >E-1</th>
+<th nowrap >E-2</th>
+<th nowrap >E-3</th>
+<th nowrap >E-4</th>
+<th nowrap >E-5</th>
+<th nowrap >E-6</th>
+<th nowrap >E-7</th>
+<th nowrap >E-8</th>
+<th nowrap >E-9</th>
+<th nowrap >E-10</th>
+</tr>
+<tr class=rowhigh>
+<td  align="right">1T</td>
+<td nowrap align="left">James Barry</td>
+<td  align="center">64</td>
+<td  align="center">63</td>
+<td  align="center">9</td>
+<td  align="center">9</td>
+<td  align="center">9</td>
+<td  align="center">4</td>
+<td  align="center">6</td>
+<td  align="center">2</td>
+<td  align="center">6</td>
+<td  align="center">9</td>
+<td  align="center">9</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowlow>
+<td  align="right">2T</td>
+<td nowrap align="left">Paul Schulman</td>
+<td  align="center">49</td>
+<td  align="center">48</td>
+<td  align="center">1</td>
+<td  align="center">6</td>
+<td  align="center">4</td>
+<td  align="center">9</td>
+<td  align="center">3</td>
+<td  align="center">9</td>
+<td  align="center">9</td>
+<td  align="center">6</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowhigh>
+<td  align="right">3 </td>
+<td nowrap align="left">Anthony Compas</td>
+<td  align="center">38</td>
+<td  align="center">38</td>
+<td  align="center">6</td>
+<td  align="center">4</td>
+<td  align="center">6</td>
+<td  align="center">3</td>
+<td  align="center">9</td>
+<td  align="center">4</td>
+<td  align="center"></td>
+<td  align="center">3</td>
+<td  align="center">2</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowlow>
+<td  align="right">4 </td>
+<td nowrap align="left">Jonathan Cohen</td>
+<td  align="center">25</td>
+<td  align="center">25</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">2</td>
+<td  align="center">4</td>
+<td  align="center">6</td>
+<td  align="center">4</td>
+<td  align="center">2</td>
+<td  align="center">6</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowhigh>
+<td  align="right">5 </td>
+<td nowrap align="left">Danielle Spora</td>
+<td  align="center">18</td>
+<td  align="center">18</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">3</td>
+<td  align="center">3</td>
+<td  align="center">4</td>
+<td  align="center">3</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowlow>
+<td  align="right">6 </td>
+<td nowrap align="left">Matthew Rigoli</td>
+<td  align="center">16</td>
+<td  align="center">15</td>
+<td  align="center">4</td>
+<td  align="center">1</td>
+<td  align="center">3</td>
+<td  align="center">1</td>
+<td  align="center">2</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowlow>
+<th nowrap rowspan="1" colspan="2" align="left"><a name="b"></a>b - 'Builder'</th>
+<th nowrap >Total Points</th>
+<th nowrap >Points W/Drops</th>
+<th nowrap >E-1</th>
+<th nowrap >E-2</th>
+<th nowrap >E-3</th>
+<th nowrap >E-4</th>
+<th nowrap >E-5</th>
+<th nowrap >E-6</th>
+<th nowrap >E-7</th>
+<th nowrap >E-8</th>
+<th nowrap >E-9</th>
+<th nowrap >E-10</th>
+</tr>
+<tr class=rowhigh>
+<td  align="right">1T</td>
+<td nowrap align="left">Stephen Anstey</td>
+<td  align="center">70</td>
+<td  align="center">69</td>
+<td  align="center">9</td>
+<td  align="center">6</td>
+<td  align="center">9</td>
+<td  align="center">9</td>
+<td  align="center">6</td>
+<td  align="center">9</td>
+<td  align="center">6</td>
+<td  align="center">6</td>
+<td  align="center">9</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowlow>
+<td  align="right">2T</td>
+<td nowrap align="left">Paul Vinas</td>
+<td  align="center">38</td>
+<td  align="center">38</td>
+<td  align="center">6</td>
+<td  align="center">9</td>
+<td  align="center">2</td>
+<td  align="center">3</td>
+<td  align="center">3</td>
+<td  align="center">1</td>
+<td  align="center">4</td>
+<td  align="center">9</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+</tr>
+<tr class=rowhigh>
+<td  align="right">3T</td>
+<td nowrap align="left">William Betz</td>
+<td  align="center">26</td>
+<td  align="center">26</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">4</td>
+<td  align="center">9</td>
+<td  align="center">6</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">6</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowlow>
+<td  align="right">4T</td>
+<td nowrap align="left">John Soulant</td>
+<td  align="center">21</td>
+<td  align="center">21</td>
+<td  align="center"></td>
+<td  align="center">2</td>
+<td  align="center">3</td>
+<td  align="center">1</td>
+<td  align="center">4</td>
+<td  align="center">1</td>
+<td  align="center">3</td>
+<td  align="center">3</td>
+<td  align="center">3</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowhigh>
+<td  align="right">5 </td>
+<td nowrap align="left">Cesar Caraballo</td>
+<td  align="center">16</td>
+<td  align="center">16</td>
+<td  align="center">1</td>
+<td  align="center">3</td>
+<td  align="center">4</td>
+<td  align="center">6</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+</tr>
+<tr class=rowlow>
+<td  align="right">6 </td>
+<td nowrap align="left">Zach Auclair</td>
+<td  align="center">12</td>
+<td  align="center">12</td>
+<td  align="center">3</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">4</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+</tr>
+<tr class=rowhigh>
+<td  align="right">7 </td>
+<td nowrap align="left">Vasken Choubaralian</td>
+<td  align="center">11</td>
+<td  align="center">11</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">6</td>
+<td  align="center"></td>
+<td  align="center">2</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowlow>
+<td  align="right">8 </td>
+<td nowrap align="left">Stephen Cruz</td>
+<td  align="center">6</td>
+<td  align="center">6</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">2</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowhigh>
+<td  align="right">8 </td>
+<td nowrap align="left">Chandon Pierre</td>
+<td  align="center">6</td>
+<td  align="center">6</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+</tr>
+<tr class=rowlow>
+<td  align="right">10 </td>
+<td nowrap align="left">Faraz Ahmed</td>
+<td  align="center">5</td>
+<td  align="center">5</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+</tr>
+<tr class=rowlow>
+<th nowrap rowspan="1" colspan="2" align="left"><a name="c"></a>c - 'Classic American Muscle'</th>
+<th nowrap >Total Points</th>
+<th nowrap >Points W/Drops</th>
+<th nowrap >E-1</th>
+<th nowrap >E-2</th>
+<th nowrap >E-3</th>
+<th nowrap >E-4</th>
+<th nowrap >E-5</th>
+<th nowrap >E-6</th>
+<th nowrap >E-7</th>
+<th nowrap >E-8</th>
+<th nowrap >E-9</th>
+<th nowrap >E-10</th>
+</tr>
+<tr class=rowhigh>
+<td  align="right">1T</td>
+<td nowrap align="left">Jared Morrison</td>
+<td  align="center">48</td>
+<td  align="center">48</td>
+<td  align="center">6</td>
+<td  align="center">9</td>
+<td  align="center"></td>
+<td  align="center">9</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">9</td>
+<td  align="center">6</td>
+<td  align="center">9</td>
+<td  align="center"></td>
+</tr>
+<tr class=rowlow>
+<td  align="right">2T</td>
+<td nowrap align="left">Ken Bertan</td>
+<td  align="center">40</td>
+<td  align="center">40</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">9</td>
+<td  align="center">6</td>
+<td  align="center">4</td>
+<td  align="center">4</td>
+<td  align="center">6</td>
+<td  align="center">4</td>
+<td  align="center">6</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowhigh>
+<td  align="right">3 </td>
+<td nowrap align="left">Ken Sr. Edwards</td>
+<td  align="center">30</td>
+<td  align="center">30</td>
+<td  align="center">9</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">9</td>
+<td  align="center">1</td>
+<td  align="center">9</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowlow>
+<td  align="right">4 </td>
+<td nowrap align="left">Doug Keller</td>
+<td  align="center">24</td>
+<td  align="center">24</td>
+<td  align="center">4</td>
+<td  align="center">6</td>
+<td  align="center"></td>
+<td  align="center">4</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">4</td>
+<td  align="center">3</td>
+<td  align="center">3</td>
+<td  align="center"></td>
+</tr>
+<tr class=rowlow>
+<th nowrap rowspan="1" colspan="2" align="left"><a name="n"></a>n - 'Novice'</th>
+<th nowrap >Total Points</th>
+<th nowrap >Points W/Drops</th>
+<th nowrap >E-1</th>
+<th nowrap >E-2</th>
+<th nowrap >E-3</th>
+<th nowrap >E-4</th>
+<th nowrap >E-5</th>
+<th nowrap >E-6</th>
+<th nowrap >E-7</th>
+<th nowrap >E-8</th>
+<th nowrap >E-9</th>
+<th nowrap >E-10</th>
+</tr>
+<tr class=rowhigh>
+<td  align="right">1T</td>
+<td nowrap align="left">Alexander Patti</td>
+<td  align="center">52</td>
+<td  align="center">51</td>
+<td  align="center">6</td>
+<td  align="center">6</td>
+<td  align="center">9</td>
+<td  align="center">4</td>
+<td  align="center">4</td>
+<td  align="center">6</td>
+<td  align="center">6</td>
+<td  align="center">9</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowlow>
+<td  align="right">2T</td>
+<td nowrap align="left">Gina Ma</td>
+<td  align="center">29</td>
+<td  align="center">29</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">3</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">9</td>
+<td  align="center">1</td>
+<td  align="center">6</td>
+<td  align="center">9</td>
+<td  align="center"></td>
+</tr>
+<tr class=rowhigh>
+<td  align="right">3T</td>
+<td nowrap align="left">Miguel Gonzalez</td>
+<td  align="center">19</td>
+<td  align="center">19</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">4</td>
+<td  align="center">1</td>
+<td  align="center">9</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowlow>
+<td  align="right">4T</td>
+<td nowrap align="left">Stephen Giovanniello</td>
+<td  align="center">16</td>
+<td  align="center">16</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">2</td>
+<td  align="center">6</td>
+<td  align="center">2</td>
+<td  align="center">4</td>
+<td  align="center"></td>
+<td  align="center">2</td>
+<td  align="center"></td>
+</tr>
+<tr class=rowhigh>
+<td  align="right">5T</td>
+<td nowrap align="left">Romeo Soria</td>
+<td  align="center">13</td>
+<td  align="center">13</td>
+<td  align="center">1</td>
+<td  align="center">4</td>
+<td  align="center">6</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center"></td>
+</tr>
+<tr class=rowlow>
+<td  align="right">6T</td>
+<td nowrap align="left">Liqi Wang</td>
+<td  align="center">8</td>
+<td  align="center">8</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">3</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowhigh>
+<td  align="right">7 </td>
+<td nowrap align="left">Adrian Green</td>
+<td  align="center">6</td>
+<td  align="center">6</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowlow>
+<td  align="right">7 </td>
+<td nowrap align="left">Tonianne Rempel</td>
+<td  align="center">6</td>
+<td  align="center">6</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowhigh>
+<td  align="right">7 </td>
+<td nowrap align="left">Yi Sun</td>
+<td  align="center">6</td>
+<td  align="center">6</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">2</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowlow>
+<td  align="right">7 </td>
+<td nowrap align="left">Noah Vinas</td>
+<td  align="center">6</td>
+<td  align="center">6</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">2</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowhigh>
+<td  align="right">11 </td>
+<td nowrap align="left">Nolan Calamia</td>
+<td  align="center">5</td>
+<td  align="center">5</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowlow>
+<td  align="right">11 </td>
+<td nowrap align="left">Darren Chan</td>
+<td  align="center">5</td>
+<td  align="center">5</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center"></td>
+</tr>
+<tr class=rowhigh>
+<td  align="right">11 </td>
+<td nowrap align="left">Nicholas Lalima</td>
+<td  align="center">5</td>
+<td  align="center">5</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+</tr>
+<tr class=rowlow>
+<td  align="right">11 </td>
+<td nowrap align="left">Igor Pechko</td>
+<td  align="center">5</td>
+<td  align="center">5</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+</tr>
+<tr class=rowhigh>
+<td  align="right">11 </td>
+<td nowrap align="left">John Pisapia</td>
+<td  align="center">5</td>
+<td  align="center">5</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center"></td>
+</tr>
+<tr class=rowlow>
+<td  align="right">11 </td>
+<td nowrap align="left">Steve Providoshin</td>
+<td  align="center">5</td>
+<td  align="center">5</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center"></td>
+</tr>
+<tr class=rowhigh>
+<td  align="right">11 </td>
+<td nowrap align="left">Brandon Soedarmasto</td>
+<td  align="center">5</td>
+<td  align="center">5</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+</tr>
+<tr class=rowlow>
+<td  align="right">11 </td>
+<td nowrap align="left">James Sokol</td>
+<td  align="center">5</td>
+<td  align="center">5</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+</tr>
+<tr class=rowhigh>
+<td  align="right">11 </td>
+<td nowrap align="left">John Stankiewicz</td>
+<td  align="center">5</td>
+<td  align="center">5</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+<td  align="center">1</td>
+<td  align="center">1</td>
+<td  align="center"></td>
+</tr>
+</tbody></table>
+<HR>
+<DIV><p align=center><font size="-1"><b>Points Method:</b> Fixed Points method</font></DIV>
+
+</BODY>
+
+</html>
